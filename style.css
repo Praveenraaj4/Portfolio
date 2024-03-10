@@ -97,7 +97,7 @@ a:hover{
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: white;
+    background-color: rgb(255, 255, 255, 70%);
     width: fit-content;
     max-height: 0;
     overflow: hidden;
@@ -211,7 +211,8 @@ section{
 
 .icon{
     cursor: pointer;
-    height: 2rem;
+    height: 1.5rem;
+    justify-content: space-between;
 }
 
 /*BUTTONS*/
@@ -333,23 +334,24 @@ section{
   
 .article-container {
     display: flex;
-    text-align: initial;
+    text-align: center;
     flex-wrap: wrap;
-    flex-direction: row;
     gap: 2.5rem;
     justify-content: space-around;
 }
   
 article {
     display: flex;
-    width: 10rem;
+    width: 8rem;
     justify-content: space-around;
     gap: 0.5rem;
+    align-self: auto;
 }
   
 article .icon {
     cursor: default;
 }
+
 
 /* PROJECTS */
 
