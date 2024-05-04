@@ -28,7 +28,7 @@ a, .btn{
 
 /*DESKTOP NAV*/
 
-nav, 
+nav,
 .nav-links{
     display: flex;
 }
@@ -167,7 +167,7 @@ section{
     display: flex;
     justify-content: center;
     gap: 5rem;
-    height: 80vh;  
+    height: 80vh;
 }
 
 .section_pic_container{
@@ -180,6 +180,7 @@ section{
 .section_text{
     align-self: center;
     text-align: center;
+    overflow: hidden;
 }
 
 .section_text p{
@@ -190,9 +191,56 @@ section{
     text-align: center;
 }
 
-.section_text_p2{
+.wrapper{
+    display: flex;
+}
+
+.wrapper .section_text_p2{
+    /* background-color: aqua;  */
+    line-height: 50px; 
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.section_text_p2 li{
+    list-style: none;
+    position: relative;
     font-size: 1.75rem;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
+    top: 0%;
+    animation: slide 8s steps(2) infinite;
+
+}
+
+@keyframes slide {
+    100%{
+        top: -95px;
+    }
+}
+
+
+.section_text_p2 li::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid white;
+    animation: typing 4s steps(17) infinite;
+}
+@keyframes typing {
+    40%,
+    60% {
+        left: calc(100% + 50px);
+    }
+    100%{
+        left: 0;
+    }
+
 }
 
 .title{
@@ -322,20 +370,20 @@ section{
 #experience {
     position: relative;
 }
-  
+
 .experience-sub-title {
     color: rgb(85, 85, 85);
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
 }
-  
+
 .experience-details-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-  
+
 .article-container {
     display: flex;
     text-align: center;
@@ -343,7 +391,7 @@ section{
     gap: 2.5rem;
     justify-content: space-around;
 }
-  
+
 article {
     display: flex;
     width: 8rem;
@@ -351,7 +399,7 @@ article {
     gap: 0.5rem;
     align-self: auto;
 }
-  
+
 article .icon {
     cursor: default;
 }
@@ -401,7 +449,7 @@ article .icon {
     border-color: rgb(163, 163, 163);
     background: rgb(250, 250, 250);
     margin: 2rem auto;
-    padding: 0.5rem;  
+    padding: 0.5rem;
 }
 
 .contact-info-container{
