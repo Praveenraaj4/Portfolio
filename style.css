@@ -432,6 +432,68 @@ article .icon {
     border-color: rgb(163, 163, 163);
 }
 
+.button{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card_image{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+.card_image img{
+    width: 100%;
+    height: 100%;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 30px;
+    width: min-content;
+    height: 90%;
+    margin: 0 2em;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    box-shadow: 5px 5px 10px rgb(0, 0, 0 ) ;
+
+}
+
+.card_content{
+    justify-content: center;
+}
+
+.card_title{
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+/* -------- SLIDER --------*/
+
+.swiper{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.swiper-wrapper{
+    width: 100%;
+    height: 35em;
+    /* background-color: lightyellow; */
+    display: flex;
+    align-items: center;
+}
+
 /* CONTACT*/
 
 #contact{
@@ -439,6 +501,7 @@ article .icon {
     justify-content: center;
     flex-direction: column;
     height: 70vh;
+    margin-top: 5%;
 }
 
 .contact-info-upper-container{

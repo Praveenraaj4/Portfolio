@@ -7,6 +7,8 @@
     <title>Portfolio | Praveen Raaj</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaquerries.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
 </head>
 
 <body>
@@ -229,52 +231,89 @@
     <section id="portfolio">
         <p class="section_text_p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-containers color-container">
-                <div class="article-container">
-                    <img src="./assets/Gemini_Generated_Image.png" alt="Project-1" class="project-img">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <div class="card swiper-slide color-container">
+                    <div class="card_image">
+                        <img src="./assets/Gemini_Generated_Image.png" alt="Project-1" class="project-img">
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Project-Soil Monitoring System</h2>
+                        <div class="button">
+                                    <button class="btn btncolor2 project-btn" onclick="location.href='https://github.com/Praveenraaj4/Iot-project-Software-Engineering'">
+                                        Github
+                                    </button>
+                                    <!-- <button class="btn btncolor2 project-btn" onclick="location.href='https://github.com'">
+                                        Live Demo
+                                    </button> -->
+                        </div>
+                            
+                    </div>
                 </div>
-                <h2 class="experience-sub-title project-title">IOT Project-Soil Monitoring System</h2>
-                <div class="btn-container">
-                    <button class="btn btncolor2 project-btn" onclick="location.href='https://github.com/Praveenraaj4/Iot-project-Software-Engineering'">
-                        Github
-                    </button>
-                    <!-- <button class="btn btncolor2 project-btn" onclick="location.href='https://github.com'">
-                        Live Demo
-                    </button> -->
+
+                <div class="card swiper-slide color-container">
+                    <div class="card_image">
+                        <img src="./assets/javascriptbg.png" alt="Project-2" class="project-img">
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Simple Javascript Projects</h2>
+                        <div class="button">
+                            <button class="btn btncolor2 project-btn" onclick="location.href='https://github.com/Praveenraaj4/Javascript-projects.git'">
+                                    Github
+                            </button>
+                            <button class="btn btncolor2 project-btn" onclick="location.href='https://praveenraaj4.github.io/Javascript-projects/'">
+                                Live Demo
+                            </button>
+                        </div>
+                    </div>
+                                
                 </div>
+
+                <div class="card swiper-slide color-container">
+                    <div class="card_image">
+                                <img src="./assets/CRM.png" alt="Project-3" class="project-img">
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">CRM Web-App (Django and MySQL)</h2>
+                        <div class="button">
+                            <button class="btn btncolor2 project-btn" onclick="location.href='https://github.com/Praveenraaj4/crm_django'">
+                                Github
+                            </button>
+                            <button class="btn btncolor2 project-btn" onclick="location.href='https://mylocal.pythonanywhere.com/'">
+                                Live Demo
+                            </button> 
+                        </div>
+                    
+                    </div>
                 </div>
-                <div class="details-containers color-container">
-                <div class="article-container">
-                    <img src="./assets/javascriptbg.png" alt="Project-2" class="project-img">
+
+                <div class="card swiper-slide color-container">
+                    <div class="card_image">
+                        <img src="./assets/realestate.png" alt="Project-3" class="project-img">
+                    </div>
+                    <div class="card_content">
+                        <h2 class="card_title">Real Estate Website(PHP&Mysql)</h2>
+                        <div class="button">
+                            <button class="btn btncolor2 project-btn" onclick="location.href='https://github.com/Praveenraaj4/Real_estate-PHP-MySQL.git'">
+                                Github
+                            </button>
+                            <!-- <button class="btn btncolor2 project-btn" onclick="location.href='https://mylocal.pythonanywhere.com/'">
+                                Live Demo
+                            </button>  -->
+                        </div>
+                    
+                    </div>
                 </div>
-                <h2 class="experience-sub-title project-title">Simple Javascript Projects</h2>
-                <div class="btn-container">
-                    <button class="btn btncolor2 project-btn" onclick="location.href='https://github.com/Praveenraaj4/Javascript-projects.git'">
-                        Github
-                    </button>
-                    <button class="btn btncolor2 project-btn" onclick="location.href='https://praveenraaj4.github.io/Javascript-projects/'">
-                        Live Demo
-                    </button>
-                </div>
-                </div>
-                <div class="details-containers color-container">
-                <div class="article-container">
-                    <img src="./assets/CRM.png" alt="Project-3" class="project-img">
-                </div>
-                <h2 class="experience-sub-title project-title">CRM Web-App (Django and MySQL)</h2>
-                <div class="btn-container">
-                    <button class="btn btncolor2 project-btn" onclick="location.href='https://github.com/Praveenraaj4/crm_django'">
-                        Github
-                    </button>
-                    <button class="btn btncolor2 project-btn" onclick="location.href='https://mylocal.pythonanywhere.com/'">
-                        Live Demo
-                    </button> 
-                </div>
-                </div>
+
+
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
+
+        
         <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow"
         onclick="location.href='./#contact'">
     </section>
@@ -310,11 +349,43 @@
 
 
 
+<!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
 
+        slidesPerView: 1,
+        spaceBetween: 30,
+        keyboard: {
+        enabled: true,
+      },
 
+        },
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
 
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    </script>
 
+                <!-- Javascript js -->
     <script src="script.js"></script>
 </body>
 </html>
